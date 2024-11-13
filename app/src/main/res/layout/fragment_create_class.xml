@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassYoga.CreateClassFragment"
+    android:background="@color/white"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create yoga class"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:id="@+id/dayOfWeek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv2"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Day of the week:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+
+                <Spinner
+                    android:id="@+id/inputDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/timeCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dayOfWeek"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Time of course:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+                <TextView
+                    android:id="@+id/inputTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pick a time"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/capacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeCourse"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Capacity:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:id="@+id/inputCapacity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Input capacity"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/capacity"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Duration:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:id="@+id/inputDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Input duration"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"
+                    android:inputType="number"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/duration"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Price per class:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:id="@+id/inputPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Input price per class"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/classType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Class type:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:id="@+id/inputType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Flow Yoga, Aerial Yoga..."
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/classType"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Teacher:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:id="@+id/inputTeacher"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Input Teacher's name"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/teacher"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description:"
+                    android:textSize="18dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.3"/>
+
+                <EditText
+                    android:id="@+id/inputDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="[Optional]"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="0.5"
+                    />
+            </LinearLayout>
+            <Button
+
+                android:id="@+id/createClassBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add class"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="25dp"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:backgroundTint="@color/black"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

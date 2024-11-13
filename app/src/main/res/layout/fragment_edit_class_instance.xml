@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".ClassInstance.EditClassInstanceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create Class Instance"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Class Yoga Input -->
+            <LinearLayout
+                android:id="@+id/classYoga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Class Yoga:"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <Spinner
+                    android:id="@+id/inputClassYoga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <!-- Date Input -->
+            <LinearLayout
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/inputDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="1.5"/>
+
+                <ImageButton
+                    android:id="@+id/pickDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/date_ic"
+                    android:contentDescription="Pick Date"/>
+            </LinearLayout>
+
+            <!-- Class Type Input -->
+            <LinearLayout
+                android:id="@+id/classType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Class Type:"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/inputType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <!-- Teacher Input -->
+            <LinearLayout
+                android:id="@+id/teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Teacher:"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/inputTeacher"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Input Teacher's name"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <!-- Description Input -->
+            <LinearLayout
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description:"
+                    android:textSize="16sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/inputDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="[Optional]"
+                    android:background="@drawable/shape_drawable"
+                    android:padding="10dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+
+            <!-- Submit Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="24dp"
+                >
+
+                <Button
+                    android:id="@+id/updateClInstanceBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:layout_gravity="center"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="40dp"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="15dp"/>
+
+                <Button
+                    android:id="@+id/deleteClInstanceBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:layout_gravity="center"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="40dp"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@android:color/white"
+                    android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
